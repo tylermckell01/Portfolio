@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  display: flex;
+  background-color: black;
+  color: rgb(64, 255, 64);
+  padding: 20px 0;
+
+  .left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
