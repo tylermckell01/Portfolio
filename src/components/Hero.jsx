@@ -6,8 +6,7 @@ export default function Hero() {
   const [gptResponse, setGptResponse] = useState("");
 
   const openai = new OpenAI({
-    apiKey:
-      "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",
+    apiKey: process.env.SECRET_API_KEY,
     dangerouslyAllowBrowser: true,
   });
 
