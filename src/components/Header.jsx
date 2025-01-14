@@ -3,11 +3,11 @@ export default function Header() {
     <div className="header">
       <div className="left">Tyler McKell</div>
       <div className="right">
-        <div>link</div>
-        <div>link</div>
-        <div>link</div>
-        <div>link</div>
-        <div>link</div>
+        <a href="./App.js">link</a>
+        <a href="./App.js">link</a>
+        <a href="./App.js">link</a>
+        <a href="./App.js">link</a>
+        <a href="./App.js">link</a>
       </div>
     </div>
   );
