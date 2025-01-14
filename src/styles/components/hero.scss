@@ -16,7 +16,12 @@
       font-size: 86px;
     }
 
-    .search {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+
       input {
       }
     }
@@ -24,6 +29,12 @@
     .buttons {
       button {
       }
+    }
+
+    .gpt-response {
+      background-color: gray;
+      width: 10vw;
+      height: 20vh;
     }
   }
 

@@ -1,15 +1,29 @@
+import { useState } from "react";
+
 export default function Hero() {
+  const [chatInput, setChatInput] = useState("");
+
+  const handlesubmit = (e) => {
+    e.preventDefault();
+
+    console.log("chatInput:", chatInput);
+  };
+
   return (
     <div className="hero">
       <div className="left">
         <div className="title">Welcome.</div>
-        <div className="search">
-          <input type="text" placeholder="this will be chatgpt" />
-        </div>
-        <div className="buttons">
-          <button>button</button>
-          <button>button</button>
-        </div>
+        <form onSubmit={handlesubmit}>
+          <input
+            type="text"
+            placeholder="this will be chatgpt"
+            onChange={(e) => setChatInput(e.target.value)}
+          />
+          <div className="buttons">
+            <button type="submit">submit</button>
+          </div>
+          <div className="gpt-response">this will be the gpt response</div>
+        </form>
       </div>
       <div className="right">
         <div className="sub-title">Landing page</div>
