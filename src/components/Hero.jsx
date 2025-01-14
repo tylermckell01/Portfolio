@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="left">
         <div className="title">Welcome.</div>
         <div className="search">
-          <input type="text" />
+          <input type="text" placeholder="this will be chatgpt" />
         </div>
         <div className="buttons">
           <button>button</button>
