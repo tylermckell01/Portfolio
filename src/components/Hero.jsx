@@ -44,17 +44,24 @@ export default function Hero() {
       <div className="left">
         <div className="title">Welcome.</div>
         <form onSubmit={handlesubmit}>
-          <input
-            type="text"
-            placeholder="this will be chatgpt"
-            value={chatInput}
-            onChange={(e) => setChatInput(e.target.value)}
-          />
+          <div className="gpt">
+            ask me ANYTHING...
+            <input
+              type="text"
+              placeholder="Chatgpt"
+              value={chatInput}
+              onChange={(e) => setChatInput(e.target.value)}
+            />
+          </div>
           <div className="buttons">
             <button type="submit">submit</button>
           </div>
           <div className="gpt-response">
-            {loading ? "Loading..." : gptResponse}
+            {loading
+              ? "Loading..."
+              : gptResponse
+              ? gptResponse
+              : "this is where your output will be"}
           </div>
         </form>
       </div>

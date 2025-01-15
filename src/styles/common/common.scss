@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: sans-serif;
 
   .App {
     margin: 0;
@@ -28,5 +29,9 @@ body {
   a {
     text-decoration: none;
     color: rgb(64, 255, 64);
+  }
+
+  button {
+    cursor: pointer;
   }
 }

@@ -6,7 +6,7 @@
 
   .left {
     width: 50%;
-    padding-bottom: 10%;
+    // padding-bottom: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,19 +22,39 @@
       gap: 30px;
       align-items: center;
 
-      input {
-      }
-    }
+      .gpt {
+        display: flex;
+        flex-direction: column;
+        color: $light-electric-green;
+        gap: 10px;
+        font-size: 18px;
+        text-align: center;
 
-    .buttons {
-      button {
+        input {
+          width: 15vw;
+        }
       }
-    }
 
-    .gpt-response {
-      background-color: gray;
-      width: 10vw;
-      height: 20vh;
+      .buttons {
+        button {
+          border-radius: 5px;
+          padding: 5px 10px;
+          transition-duration: 0.5s;
+
+          &:hover {
+            background-color: $light-electric-green;
+          }
+        }
+      }
+
+      .gpt-response {
+        width: 20vw;
+        height: 20vh;
+        background-color: gray;
+        border-radius: 20px;
+        opacity: 0.9;
+        padding: 10px;
+      }
     }
   }
 
@@ -51,6 +71,13 @@
     }
 
     .about-text {
+      width: 80%;
+      background-color: gray;
+      padding: 10px;
+      border-radius: 20px;
+      // opacity: 0.8;
+      color: black;
+      font-weight: 600;
     }
   }
 }
