@@ -4,27 +4,39 @@ import OpenAI from "openai";
 export default function Hero() {
   const [chatInput, setChatInput] = useState("");
   const [gptResponse, setGptResponse] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
     dangerouslyAllowBrowser: true,
   });
 
   const handlesubmit = async (e) => {
     e.preventDefault();
+    if (loading) return;
+    setLoading(true);
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: [
-        { role: "system", content: "You are a helpful assistant." },
-        {
-          role: "user",
-          content: chatInput,
-        },
-      ],
-    });
+    try {
+      const completion = await openai.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [
+          { role: "system", content: "You are a helpful assistant." },
+          {
+            role: "user",
+            content: chatInput,
+          },
+        ],
+      });
 
-    setGptResponse(completion.choices[0].message.content);
+      setGptResponse(completion.choices[0].message.content);
+    } catch (error) {
+      setGptResponse(
+        "An error occurred while fetching the response... probably out of credits"
+      );
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -35,12 +47,15 @@ export default function Hero() {
           <input
             type="text"
             placeholder="this will be chatgpt"
+            value={chatInput}
             onChange={(e) => setChatInput(e.target.value)}
           />
           <div className="buttons">
             <button type="submit">submit</button>
           </div>
-          <div className="gpt-response">{gptResponse}</div>
+          <div className="gpt-response">
+            {loading ? "Loading..." : gptResponse}
+          </div>
         </form>
       </div>
       <div className="right">
