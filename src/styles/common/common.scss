@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+
+  .App {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(
+      to bottom right,
+      white,
+      $light-electric-green,
+      $electric-green
+    );
+
+    .background {
+      margin: 75px 50px;
+      width: 100%;
+      background-image: url("../../images/green-background-3.webp");
+      background-size: cover;
+      border-radius: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 10px 10px 40px 15px black, 10px 10px 40px 15px $electric-green;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(64, 255, 64);
+  }
+}
