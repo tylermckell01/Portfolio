@@ -49,11 +49,11 @@
 
       .gpt-response {
         width: 20vw;
-        height: 20vh;
         background-color: gray;
         border-radius: 20px;
         opacity: 0.9;
-        padding: 10px;
+        padding: 15px;
+        overflow-y: auto;
       }
     }
   }
