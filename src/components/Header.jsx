@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <div className="header">
-      <div className="left">Tyler McKell</div>
+      <div className="left">
+        <Link to="./">Tyler McKell</Link>
+      </div>
       <div className="right">
-        <a href="./MyJs.js">JS</a>
-        <a href="./MyReact.js">REACT</a>
-        <a href="./MyPython.js">PYTHON</a>
-        <a href="./App.js">link</a>
-        <a href="./App.js">link</a>
+        <Link to="./my-js">JS</Link>
+        <Link to="./my-react">REACT</Link>
+        <Link to="./my-python">PYTHON</Link>
       </div>
     </div>
   );
