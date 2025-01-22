@@ -1,0 +1,47 @@
+.hero {
+  // width: 100%;
+  display: flex;
+  color: white;
+  // border-radius: 0 0 15px 15px;
+
+  .left {
+    // width: 50%;
+    // padding-top: 10%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // gap: 30px;
+
+    #carouselcontainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: solid 5px #8bcff3;
+      padding: 15px;
+
+      #buttoncontainer {
+        display: flex;
+        align-items: center;
+        height: 25%;
+
+        #prevbutton,
+        #nextbutton {
+          border-radius: 50%;
+          border: solid 3px black;
+          transition: padding 400ms, margin 400ms, background-color 400ms;
+        }
+
+        #circle1,
+        #circle2,
+        #circle3 {
+          background-color: gray;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          transition: background-color 200ms;
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+}
