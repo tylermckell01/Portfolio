@@ -10,9 +10,9 @@ function MyJs() {
     const circle3 = document.getElementById("circle3");
 
     const images = [
-      "../../public/images/tree1.jpg",
-      "../../public/images/tree2.jpg",
-      "../../public/images/tree3.jpg",
+      "/images/tree1.jpg",
+      "/images/tree2.jpg",
+      "/images/tree3.jpg",
     ];
 
     const circles = [circle1, circle2, circle3];
@@ -22,7 +22,7 @@ function MyJs() {
       componentImage.src = images[imageIndex];
       circles.forEach((circle, index) => {
         circle.style.backgroundColor =
-          index === imageIndex ? "#8bcff3" : "gray";
+          index === imageIndex ? "#01b401" : "gray";
       });
     };
 
