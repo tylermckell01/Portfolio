@@ -1,22 +1,15 @@
 .hero {
-  // width: 100%;
   display: flex;
   color: white;
-  // border-radius: 0 0 15px 15px;
 
   .left {
-    // width: 50%;
-    // padding-top: 10%;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // gap: 30px;
 
     #carouselcontainer {
       display: flex;
       flex-direction: column;
       align-items: center;
       border: solid 5px $electric-green;
+      border-radius: 10px;
       padding: 15px;
 
       #imagecontainer {
@@ -35,7 +28,7 @@
         #nextbutton {
           border-radius: 50%;
           border: solid 3px black;
-          transition: padding 400ms, margin 400ms, background-color 400ms;
+          transition: padding 300ms, margin 300ms, background-color 400ms;
           margin: 10px;
           padding: 10px;
           // border: solid 2px black;
